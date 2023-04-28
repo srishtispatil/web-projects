@@ -1,0 +1,260 @@
+body{
+  background-color:yellow;
+}
+
+.body{
+  width:400px;
+	height:250px;
+  background:darkblue;
+	position:absolute;
+	bottom:0;
+	left:1%;
+	margin-left:5px;
+  border-left:15px solid black;
+  border-right:15px solid black;
+	}
+.hat{ position: absolute;
+  left: 12%;
+  top: -85px;
+  margin: -120px -55px;
+  height: 200px;
+  width: 410px;
+  border-radius: 140px 140px 0 0;
+  background-color: black;
+  z-index: 2;
+
+}
+
+.hat::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 160px;
+  left: -50px;
+  height: 45px;
+  width: 500px;
+  background-color: #373740;
+  border-radius: 50px;
+  z-index: 3;
+}
+.body .visor{
+  position:absolute;
+  border-radius: 40%;
+  left: -10%;
+  width:300px;
+  height:170px;
+  background: #225683;
+  border: 35px solid;
+}
+
+.body .visor .visor_detalle1{
+  position:absolute;
+  border-radius: 43%;
+  left: 1%;
+  bottom:10;
+  width:270px;
+  height:120px;
+  background: #75DAF4;
+
+}
+
+.body .visor .visor_detalle1 .visor_detalle2{
+
+  position:absolute;
+  border-radius: 40%;
+  top: 10%;
+  left:10%;
+  width:180px;
+  height:60px;
+  background: #ffffff;
+}
+
+
+body1{
+  background-color:#fedd28;
+
+}
+
+.body1{
+  width:400px;
+	height:250px;
+  background:red;
+	position:absolute;
+	bottom:0;
+	left:110%;
+	margin-left:5px;
+  border-left:15px solid black;
+  border-right:15px solid black;
+	}
+.hat1{ position: absolute;
+  left: 12%;
+  top: -85px;
+  margin: -120px -59px;
+  height: 200px;
+  width: 420px;
+  border-radius: 140px 140px 0 0;
+  background-color: black;
+  z-index: 2;
+
+}
+
+.hat1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 160px;
+  left: -50px;
+  height: 45px;
+  width: 500px;
+  background-color: #373740;
+  border-radius: 50px;
+  z-index: 3;
+}
+
+
+
+
+.body1 .visor1{
+  position:absolute;
+  border-radius: 40%;
+  left: -10%;
+  width:300px;
+  height:170px;
+  background: #225683;
+  border: 20px solid;
+}
+
+.body1 .visor1 .visor_detalle11{
+  position:absolute;
+  border-radius: 43%;
+  left: 1%;
+  bottom:10;
+  width:270px;
+  height:120px;
+  background: #75DAF4;
+
+}
+
+.body1 .visor1 .visor_detalle11 .visor_detalle12{
+
+  position:absolute;
+  border-radius: 40%;
+  top: 10%;
+  left:10%;
+  width:180px;
+  height:60px;
+  background: #ffffff;
+}
+
+
+body11{
+  background-color:#fedd28;
+background-margin:5px;
+backgroung-margin-color:white;
+}
+
+.body11{
+  width:400px;
+	height:250px;
+  background:pink;
+	position:absolute;
+	bottom:0;
+	left:225%;
+	margin-left:5px;
+  border-left:15px solid black;
+  border-right:15px solid black;
+	}
+.hat11{ position: absolute;
+  left: 12%;
+  top: -85px;
+  margin: -120px -59px;
+  height: 200px;
+  width: 420px;
+  border-radius: 140px 140px 0 0;
+  background-color: black;
+  z-index: 2;
+
+}
+
+.hat11::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 160px;
+  left: -50px;
+  height: 45px;
+  width: 500px;
+  background-color: #373740;
+  border-radius: 50px;
+  z-index: 3;
+}
+
+
+
+
+.body11 .visor11{
+  position:absolute;
+  border-radius: 40%;
+  left: -10%;
+  width:300px;
+  height:170px;
+  background: #225683;
+  border: 20px solid;
+}
+
+.body11 .visor11 .visor_detalle111{
+  position:absolute;
+  border-radius: 43%;
+  left: 1%;
+  bottom:10;
+  width:270px;
+  height:120px;
+  background: #75DAF4;
+
+}
+
+.body11 .visor11 .visor_detalle111 .visor_detalle112{
+
+  position:absolute;
+  border-radius: 40%;
+  top: 10%;
+  left:10%;
+  width:180px;
+  height:60px;
+  background: #ffffff;
+}
+
+
+
+
+.body .visor{
+  position:absolute;
+  border-radius: 40%;
+  left: -10%;
+  width:300px;
+  height:170px;
+  background: #225683;
+  border: 20px solid;
+}
+
+.body .visor .visor_detalle1{
+  position:absolute;
+  border-radius: 43%;
+  left: 1%;
+  bottom:10;
+  width:270px;
+  height:120px;
+  background: #75DAF4;
+
+}
+
+.body .visor .visor_detalle1 .visor_detalle2{
+
+  position:absolute;
+  border-radius: 40%;
+  top: 10%;
+  left:10%;
+  width:180px;
+  height:60px;
+  background: #ffffff;
+}
