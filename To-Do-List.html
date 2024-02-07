@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List with Clock</title>
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #ffe5b4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    width: 500px;
+
+    background-color: #b8b8b8;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(2, 2, 2, 2);
+  }
+
+  #clock {
+    font-size: 44px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: 5px solid #7a7a7a;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  .task {
+    display: flex;
+    align-items: center;
+  }
+
+  .task-text {
+    flex-grow: 1;
+  }
+
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+
+  }
+
+  .delete-btn {
+    background-color: #dc3545;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="clock"></div>
+  <input type="text" id="taskInput" placeholder="Add task's...">
+  <button id="addTaskBtn">Add Task</button>
+  <ul id="taskList"></ul>
+</div>
+
+<script>
+  // Clock
+  function updateClock() {
+    const now = new Date();
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const dateString = now.toLocaleDateString('en-US', dateOptions);
+    const timeString = now.toLocaleTimeString('en-US', timeOptions);
+    document.getElementById('clock').textContent = `${dateString} ${timeString}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
+
+  // To-Do List
+  const taskInput = document.getElementById('taskInput');
+  const addTaskBtn = document.getElementById('addTaskBtn');
+  const taskList = document.getElementById('taskList');
+
+  function addTask() {
+    const taskText = taskInput.value.trim();
+    if (taskText !== '') {
+      const taskItem = document.createElement('li');
+      taskItem.classList.add('task');
+      taskItem.innerHTML = `
+        <span class="task-text">${taskText}</span>
+        <button class="complete-btn">Completed</button>
+        <button class="delete-btn">Delete</button>
+      `;
+      taskList.appendChild(taskItem);
+      taskInput.value = '';
+      bindTaskEvents(taskItem);
+    }
+  }
+
+  function removeTask() {
+    const taskItem = this.parentNode;
+    taskItem.remove();
+  }
+
+  function toggleTask() {
+    const taskItem = this.parentNode;
+    taskItem.classList.toggle('completed');
+  }
+
+  function bindTaskEvents(taskItem) {
+    const deleteButton = taskItem.querySelector('.delete-btn');
+    const completeButton = taskItem.querySelector('.complete-btn');
+
+    deleteButton.addEventListener('click', removeTask);
+    completeButton.addEventListener('click', toggleTask);
+  }
+
+  addTaskBtn.addEventListener('click', addTask);
+
+</script>
+
+</body>
+</html>
